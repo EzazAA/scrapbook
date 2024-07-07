@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>connect</title>
+    <link rel="stylesheet" href="/css/connect.css">
+</head>
+
+<body>
+    <main>
+        <section>
+            <navbar class="nav">
+                <a href=""><u id="und">About</u></a>
+                <a href="index.html"><u id="und">Home</u></a>
+                <a href=""><u id="und">Connect</u></a>
+            </navbar>
+            <form id="contactForm" action="sendEmail.php" method="post">
+
+                <label id="email">Email</label>
+                <input type="email" id="email" placeholder="example@email.com" required>
+
+                <label id="name">Name</label>
+                <input type="text" placeholder="john doe" required id="name">
+
+                <label id="sub">Subject</label>
+                <input type="text" placeholder="your message" required id="message">
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

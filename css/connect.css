@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: montrat;
+    src: url(/assets/Montserrat-Thin.ttf);
+}
+body{
+    color: white;
+    background-color: black;
+    font-family: montrat;
+}
+section{
+    margin: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nav a{
+    color: white;
+    font-weight: bold;
+    padding: 10vh;
+}
+.nav{
+    margin: 10vh;
+}
+.nav a:hover{
+    opacity: 0.8;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    width: 50vh;
+    padding: 2vh;
+    border: none;
+    margin-bottom: 4vh;
+    outline: none;
+}
+label{
+    font-size: x-large;
+}
+button{
+    padding: 1.5vh;
+}
+@media screen and (max-width: 768px) {
+    input{
+        width: 30vh;
+    }
+} 

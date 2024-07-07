@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: montrat;
+    src: url(/assets/Montserrat-Thin.ttf);
+}
+body{
+    color: white;
+    background-color: black;
+    font-family: montrat;
+}
+section{
+    margin: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nav a{
+    color: white;
+    font-weight: bold;
+    padding: 10vh;
+}
+.nav{
+    margin: 10vh;
+}
+.nav a:hover{
+    opacity: 0.8;
+}
+.link a{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 0.3vh;
+}
+.link a .title{
+    font-size: larger;
+    font-weight: bold;
+    margin: 20px 0px 10px 0px;
+}
+.link a .time{
+    font-size: small;
+    font-style: italic;
+    padding: 2vh;
+    text-decoration: none;
+}
+.link a{
+    text-decoration: none;
+}
+.link{
+    padding: 3vh;
+    
+}
+.link:hover{
+    background-color: rgba(255, 255, 255, 0.144);
+}
+.archive{
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+    main .h1{
+        text-align: center;
+    }
+    .nav a{
+        margin-bottom: 2vh;
+    }
+}     
+@media screen and (max-width: 833px) {
+    .nav a {
+        padding: 6vh;
+    }
+}
