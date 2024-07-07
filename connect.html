@@ -31,6 +31,28 @@
             </form>
         </section>
     </main>
+    <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the form from submitting normally
+
+      var form = this;
+      var formData = new FormData(form);
+
+      fetch(form.action, {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('responseMessage').innerHTML = data.message;
+        form.reset();
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        document.getElementById('responseMessage').innerHTML = 'Failed to send message.';
+      });
+    });
+  </script>
 </body>
 
 </html>
