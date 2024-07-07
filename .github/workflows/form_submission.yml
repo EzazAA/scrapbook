@@ -1,0 +1,25 @@
+name: Form Submission
+
+on:
+  push:
+    branches:
+      - main  # Replace with your branch name where the form submission occurs
+
+jobs:
+  send-email:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Send email
+        env:
+          TO_EMAIL: your@email.com  # Replace with your email
+        run: |
+          echo "Name: ${{ github.event.inputs.name }}" > email.txt
+          echo "Email: ${{ github.event.inputs.email }}" >> email.txt
+          echo "Message: ${{ github.event.inputs.message }}" >> email.txt
+          mail -s "New Contact Form Submission" $TO_EMAIL < email.txt
+
+      - name: Notify success
+        run: echo '{"status": "success", "message": "Email sent successfully!"}'
